@@ -88,8 +88,6 @@ namespace Infrastructure.Repositories
                 return res;
             }
             return null;
-        }
-
-       
+        } 
     }
 }
