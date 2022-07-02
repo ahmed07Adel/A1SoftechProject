@@ -18,9 +18,10 @@ namespace Infrastructure.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+    
             modelBuilder.Entity<Employee>().HasData(
                 new Employee { Id=1, Email = "Ahmed@Gmail.Com", Mobile=012334, Name="Ahmed", Salary=2000 },
-                 new Employee { Id=2, Email = "Ali@Gmail.Com", Mobile=3435454, Name="ali", Salary=3000 }
+                new Employee { Id=2, Email = "Ali@Gmail.Com", Mobile=3435454, Name="ali", Salary=3000 }
                 );
         }
     }

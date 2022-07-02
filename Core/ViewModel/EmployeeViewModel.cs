@@ -18,5 +18,6 @@ namespace Core.ViewModel
         [ValidEmailDomain(AllowDomain: "Gmail.com", ErrorMessage = "Email Must Be Gmail.com")]
         public string Email { get; set; }
         public float Salary { get; set; }
+        public float  NetSalary { get; set; }
     }
 }

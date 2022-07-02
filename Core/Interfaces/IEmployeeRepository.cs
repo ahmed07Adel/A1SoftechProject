@@ -17,5 +17,7 @@ namespace Core.Interfaces
         Task<Employee> UpdateEmployee(EmployeeViewModel employee);
         Task<Employee> DeleteEmployee(int EmployeeID);
         Task<EmployeeTax> CalculateEmployeeTax(EmployeeTax CalcEmployeeTax);
+        Task<EmployeeTax> UpdateCalculateEmployeeTax(EmployeeTax CalcEmployeeTax);
+        Task<float?> GetEmployeeNetSalary(int employeeId);
     }
 }

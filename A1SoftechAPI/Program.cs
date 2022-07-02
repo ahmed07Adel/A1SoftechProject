@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<Infrastructure.Data.EmployeeDBContext>(a => a.UseSqlServer(builder.Configuration
                                                                            .GetConnectionString("Conn")));
+
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 var app = builder.Build();
 // Configure the HTTP request pipeline.
@@ -18,6 +19,12 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseCors(x => x
+       .WithOrigins("http://localhost:4200")
+         .AllowAnyMethod()
+         .AllowAnyHeader()
+         .SetIsOriginAllowed(origin => true)
+         .AllowCredentials());
 }
 
 app.UseHttpsRedirection();
