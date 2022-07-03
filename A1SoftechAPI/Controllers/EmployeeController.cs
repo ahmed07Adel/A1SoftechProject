@@ -123,18 +123,7 @@ namespace A1SoftechAPI.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Error deleting data");
             }
         }
-        [HttpGet("GetNetSalary")]
-        public ActionResult<double> GetNetSalary(double Salary)
-        {
-            try
-            {
-                return  repository.GetNetSalary(Salary);
-            }
-            catch (Exception)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Error Get data");
-            }
-        }
+       
         
     }
 }
