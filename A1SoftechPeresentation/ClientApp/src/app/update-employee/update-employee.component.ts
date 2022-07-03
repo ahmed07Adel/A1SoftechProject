@@ -79,6 +79,7 @@ taxPaid!:number;
       this.ValidateEmployeeModel();
       this.service.UpdateEmployee(id, this.Employee).subscribe(success => {
         alert('Product Updated Successfully');
+        window.location.reload();
       }, err => console.log(err));
   }
 }
